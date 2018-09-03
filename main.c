@@ -105,6 +105,7 @@ int main(void)
                     {
                         case 1:  // Melhor(es) Cliente(s) - os que têm mais agendamentos
                             printf("\n\nATENCAO: opcao para implementar no exame\n\n");
+                            listarClientesComMaisAgendamentosReg (vetorDinAgendamentos, vetorClientes, quantClientes, quantAgendamentos, quantAgendamentosRegistados);
                             break;
                         case 2 : // Índice/Percentagens por graus de satisfacao dos clientes
                             printf("\n\nATENCAO: opcao para implementar no exame\n\n");

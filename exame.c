@@ -172,6 +172,40 @@ void listarAgendamentosPorData (tipoAgendamento *pAgend, tipoCliente vetorClient
     }
 }
 
+/*-------------------------------- FUNÇÕES ESTATÍSTICAS --------------------------------------- */
+
+// TESTES - Ainda não funciona correctamente.
+
+void listarClientesComMaisAgendamentosReg (tipoAgendamento *pAgend, tipoCliente vetorClientes[MAX], int *quantClientes, int *quantAgendamentos, int *quantAgendamentosRegistados)
+{
+    int mais;
+    int i;
+
+    if (quantAgendamentos == 0)
+    {
+        printf("\n Nao existem agendamentos inseridos!");
+    }
+    else
+    {
+        mais = vetorClientes[0].numContribuinte;
+        for (i = 1; i < quantAgendamentos; i++)
+        {
+            if (vetorClientes[i].numContribuinte > mais)
+            {
+                mais = vetorClientes[i].numContribuinte;
+            }
+        }
+        printf("\n Clientes com mais agendamentos registados: %d\n", mais);
+        for(i = 0; i < quantAgendamentos; i++)
+        {
+            if (vetorClientes[i].numContribuinte == mais)
+            {
+                escreverCliente(vetorClientes[i]);
+            }
+        }
+    }
+}
+
 
 /* ------------------------------- FUNÇÕES AUXILIARES DE PROCURAR ----------------------------- */
 

@@ -13,6 +13,6 @@ int procurarAgendamentoPorData(tipoAgendamento *pAgend, tipoCliente vetorCliente
 
 
 /* Funções de teste */
-
+void listarClientesComMaisAgendamentosReg (tipoAgendamento *pAgend, tipoCliente vetorClientes[MAX], int *quantClientes, int *quantAgendamentos, int *quantAgendamentosRegistados);
 
 #endif // EXAME_H_INCLUDED
